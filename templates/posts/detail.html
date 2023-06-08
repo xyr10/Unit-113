@@ -1,0 +1,16 @@
+{% extends 'base.html' %} 
+
+
+{% block title %}{{ post.title }}{% endblock title %} 
+
+
+{% block content %} 
+<div class="container">
+    <h1>Detail Post</h1>
+    <p>Provide the post details here '{{ post.title }}'?</p>
+        <form method="POST">
+            {% csrf_token %} 
+        <input type="submit" class="btn btn-success" value="Confirm">
+        </form>
+</div>
+{% endblock content %} 
